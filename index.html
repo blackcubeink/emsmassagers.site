@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EMSense EMS Massager — Triple Therapy Foot Relief</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -791,10 +794,28 @@ footer {
   border-top: 1px solid var(--border);
   padding: 40px 80px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  gap: 24px;
   font-size: 13px;
   color: var(--muted);
+}
+.footer-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-disclaimer {
+  width: 100%;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 820px;
+  margin: 0 auto;
 }
 footer .logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 3px; color: var(--muted); }
 footer .logo span { color: var(--gold); opacity: 0.6; }
@@ -815,7 +836,8 @@ footer a:hover { color: var(--white); }
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; padding: 60px 24px; }
-  .hero-visual { display: none; }
+  .hero-visual { display: block; width: 100%; margin-top: 32px; }
+  .product-showcase { height: 280px; }
   section { padding: 70px 24px; }
   .col-2, .problem-cards, .faq-grid, .pricing-cards, .reviews-grid { grid-template-columns: 1fr; }
   .benefits-grid, .hiw-steps { grid-template-columns: 1fr 1fr; }
@@ -824,19 +846,6 @@ footer a:hover { color: var(--white); }
   footer { flex-direction: column; gap: 20px; text-align: center; padding: 32px 24px; }
   .hiw-steps::before { display: none; }
 }
-
-/* ── DESIGN NOTES SECTION ── */
-  background: var(--deep);
-  border-top: 2px solid var(--gold);
-  padding: 80px;
-  position: relative;
-}
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 28px;
-}
-.swatch-label { position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); font-size: 10px; color: var(--muted); white-space: nowrap; }
 
 /* ── STICKY BUY BAR ── */
 .sticky-bar {
@@ -1775,14 +1784,16 @@ footer a:hover { color: var(--white); }
 <!--  FOOTER                                -->
 <!-- ══════════════════════════════════════ -->
 <footer>
-  <div class="logo">EM<span>SENSE</span></div>
-  <div>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms of Service</a>
-    <a href="#">Refund Policy</a>
-    <a href="#">Contact</a>
+  <div class="footer-top">
+    <div class="logo">EM<span>SENSE</span></div>
+    <div>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Refund Policy</a>
+      <a href="#">Contact</a>
+    </div>
   </div>
-  <div style="font-size:12px; color:var(--muted); max-width:320px; text-align:right; line-height:1.5;">
+  <div class="footer-disclaimer">
     This is an independent affiliate page and is not the official EMSense website. EMSense is a registered trademark of its respective owner. This page is not affiliated with, endorsed by, or sponsored by EMSense. This product is not intended to diagnose, treat, cure, or prevent any disease. Results vary. Always consult a healthcare provider for medical concerns.
   </div>
 </footer>
@@ -1790,6 +1801,17 @@ footer a:hover { color: var(--white); }
 
 <!-- ── JAVASCRIPT ── -->
 <script>
+// ── 0. HERO VIDEO — mobile autoplay fallback ──
+(function() {
+  const heroVid = document.querySelector('.product-showcase video');
+  if (!heroVid) return;
+  heroVid.muted = true;
+  const tryPlay = () => heroVid.play().catch(() => {});
+  tryPlay();
+  document.addEventListener('touchstart', tryPlay, { once: true });
+  document.addEventListener('scroll', tryPlay, { once: true });
+})();
+
 // ── 1. STICKY BAR — show after hero scrolls out of view ──
 (function() {
   const bar = document.getElementById('stickyBar');
