@@ -1,0 +1,1926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMSense EMS Massager — Triple Therapy Foot Relief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black: #0a0a0b;
+  --deep: #0f1318;
+  --card: #161b22;
+  --border: #1e2730;
+  --white: #f5f3ef;
+  --cream: #ede8df;
+  --gold: #c8a96e;
+  --gold-light: #e2c98a;
+  --gold-dim: rgba(200,169,110,0.15);
+  --red: #e03e2d;
+  --muted: #6b7a8d;
+  --text: #cdd5df;
+  --radius: 14px;
+  --radius-lg: 24px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--black);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* ── TYPOGRAPHY ── */
+.serif { font-family: 'DM Serif Display', Georgia, serif; }
+.display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.04em; }
+
+/* ── NOISE TEXTURE OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.35;
+}
+
+/* ── SCROLLING TICKER ── */
+.ticker {
+  background: var(--gold);
+  color: var(--black);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ticker-inner {
+  display: inline-block;
+  animation: ticker 30s linear infinite;
+}
+.ticker-inner span { margin: 0 40px; }
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ── NAV ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10,10,11,0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+  color: var(--white);
+}
+.nav-logo span { color: var(--gold); }
+.nav-cta {
+  background: var(--gold);
+  color: var(--black);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--gold-light); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 80px 80px;
+  gap: 60px;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(200,169,110,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; left: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(224,62,45,0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gold-dim);
+  border: 1px solid rgba(200,169,110,0.3);
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 40px;
+  margin-bottom: 28px;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  animation: pulse-dot 2s ease infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(56px, 7vw, 96px);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 28px;
+}
+.hero-title em {
+  font-style: normal;
+  color: var(--gold);
+  display: block;
+}
+
+.hero-sub {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 40px;
+}
+.hero-sub strong { color: var(--white); font-weight: 600; }
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gold);
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 18px 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s;
+  box-shadow: 0 8px 30px rgba(200,169,110,0.35);
+}
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(200,169,110,0.45);
+}
+.btn-primary svg { transition: transform 0.2s; }
+.btn-primary:hover svg { transform: translateX(4px); }
+
+.btn-ghost {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+}
+.btn-ghost:hover { color: var(--white); }
+
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border);
+}
+.stat-item {}
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: var(--white);
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.stat-num span { color: var(--gold); }
+.stat-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; margin-top: 4px; }
+
+/* HERO VISUAL */
+.hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-showcase {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 4/5;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.product-showcase::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 20%, rgba(200,169,110,0.12) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 80%, rgba(224,62,45,0.06) 0%, transparent 50%);
+}
+
+
+.showcase-badges {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.badge-float {
+  position: absolute;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  backdrop-filter: blur(10px);
+  animation: float-badge 4s ease-in-out infinite;
+}
+.badge-float:nth-child(2) { animation-delay: 1.5s; animation-duration: 5s; }
+.badge-icon { font-size: 20px; }
+.badge-text { font-size: 12px; font-weight: 600; color: var(--white); line-height: 1.3; }
+.badge-sub { font-size: 10px; color: var(--muted); }
+.badge-1 { top: 20px; right: -10px; }
+.badge-2 { bottom: 60px; left: -20px; }
+@keyframes float-badge {
+  0%,100%{transform:translateY(0px);}
+  50%{transform:translateY(-8px);}
+}
+
+/* ── SECTION COMMONS ── */
+section { padding: 100px 80px; }
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(36px, 4vw, 58px);
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.section-title em { font-style: italic; color: var(--gold); }
+.section-body {
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--text);
+  max-width: 560px;
+  line-height: 1.8;
+}
+.col-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.col-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+/* ── PROBLEM SECTION ── */
+.problem-section {
+  background: var(--deep);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.problem-section::before {
+  content: 'PAIN';
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 300px;
+  letter-spacing: -10px;
+  color: rgba(224,62,45,0.03);
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.problem-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.problem-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.problem-card:hover { border-color: rgba(224,62,45,0.4); transform: translateY(-4px); }
+.problem-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: var(--red);
+}
+.problem-card-icon { font-size: 32px; margin-bottom: 16px; }
+.problem-card h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 21px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.problem-card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+/* ── SOLUTION ── */
+.solution-section { position: relative; overflow: hidden; }
+.solution-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 1px; height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(200,169,110,0.2), transparent);
+}
+
+.solution-visual {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+}
+.solution-visual::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(200,169,110,0.08), transparent 70%);
+}
+
+.therapy-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.therapy-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+.therapy-item:hover { border-color: rgba(200,169,110,0.3); background: rgba(200,169,110,0.04); }
+.therapy-num {
+  width: 40px; height: 40px;
+  background: var(--gold-dim);
+  border: 1px solid rgba(200,169,110,0.3);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.therapy-text h4 { font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+.therapy-text p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+/* ── BENEFITS ── */
+.benefits-section { background: var(--deep); border-top: 1px solid var(--border); }
+.benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 60px; }
+.benefit-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.benefit-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s;
+}
+.benefit-card:hover::after { transform: scaleX(1); }
+.benefit-card:hover { border-color: rgba(200,169,110,0.25); transform: translateY(-6px); }
+.benefit-icon {
+  width: 52px; height: 52px;
+  background: var(--gold-dim);
+  border: 1px solid rgba(200,169,110,0.2);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+.benefit-card h3 { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.benefit-card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+/* ── HOW IT WORKS ── */
+.hiw-section { position: relative; }
+.hiw-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 70px; position: relative; }
+.hiw-steps::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: calc(16.6% + 20px);
+  right: calc(16.6% + 20px);
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold), rgba(200,169,110,0.2), var(--gold));
+}
+.hiw-step { text-align: center; padding: 0 32px; }
+.step-circle {
+  width: 72px; height: 72px;
+  background: var(--card);
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 28px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  color: var(--gold);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 30px rgba(200,169,110,0.2);
+}
+.hiw-step h3 { font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
+.hiw-step p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+/* ── TESTIMONIALS ── */
+.testimonials-section {
+  background: var(--deep);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 60px; }
+.review-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: all 0.3s;
+  position: relative;
+}
+.review-card:hover { border-color: rgba(200,169,110,0.3); transform: translateY(-4px); }
+.review-card::before {
+  content: '\201C';
+  font-family: 'DM Serif Display', serif;
+  font-size: 80px;
+  color: var(--gold);
+  opacity: 0.15;
+  position: absolute;
+  top: 10px;
+  left: 24px;
+  line-height: 1;
+}
+.stars { color: var(--gold); font-size: 15px; margin-bottom: 16px; letter-spacing: 2px; }
+.review-text { font-size: 14px; color: var(--text); line-height: 1.8; margin-bottom: 24px; font-style: italic; }
+.review-author { display: flex; align-items: center; gap: 12px; }
+.author-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--gold-dim);
+  border: 2px solid rgba(200,169,110,0.3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+}
+.author-name { font-size: 14px; font-weight: 700; color: var(--white); }
+.author-meta { font-size: 12px; color: var(--muted); }
+.verified-badge {
+  margin-left: auto;
+  background: rgba(39,174,96,0.12);
+  border: 1px solid rgba(39,174,96,0.3);
+  color: #27ae60;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+/* ── FEATURES ── */
+.features-section { position: relative; overflow: hidden; }
+.features-list { display: flex; flex-direction: column; gap: 24px; }
+.feature-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: all 0.3s;
+}
+.feature-row:hover { border-color: rgba(200,169,110,0.3); transform: translateX(8px); }
+.feature-icon {
+  width: 56px; height: 56px;
+  background: var(--gold-dim);
+  border: 1px solid rgba(200,169,110,0.25);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+}
+.feature-content h3 { font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.feature-content p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+.features-visual {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+.spec-row:last-child { border-bottom: none; }
+.spec-label { font-size: 13px; color: var(--muted); font-weight: 500; }
+.spec-value { font-size: 14px; color: var(--white); font-weight: 600; }
+.spec-pill {
+  background: rgba(200,169,110,0.12);
+  border: 1px solid rgba(200,169,110,0.25);
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* ── FAQ ── */
+.faq-section { background: var(--deep); border-top: 1px solid var(--border); }
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 60px; }
+.faq-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  transition: border-color 0.3s;
+}
+.faq-item:hover { border-color: rgba(200,169,110,0.3); }
+.faq-q {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.faq-q::before {
+  content: 'Q';
+  background: var(--gold-dim);
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.faq-a { font-size: 14px; color: var(--muted); line-height: 1.75; padding-left: 34px; }
+
+/* ── PRICING / FINAL CTA ── */
+.cta-section {
+  background: var(--black);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(200,169,110,0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.cta-section .section-title { margin: 0 auto 16px; }
+.cta-section .section-body { margin: 0 auto 60px; text-align: center; }
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+.pricing-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  position: relative;
+  transition: all 0.3s;
+}
+.pricing-card:hover { transform: translateY(-8px); }
+.pricing-card.featured {
+  border-color: var(--gold);
+  box-shadow: 0 0 60px rgba(200,169,110,0.12);
+}
+.popular-label {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--black);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 18px;
+  border-radius: 20px;
+}
+.pricing-tier { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 16px; }
+.pricing-price {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 56px;
+  color: var(--white);
+  line-height: 1;
+  letter-spacing: 1px;
+}
+.pricing-price span { font-size: 24px; color: var(--muted); text-decoration: line-through; display: block; margin-bottom: 4px; font-family: 'DM Sans', sans-serif; font-weight: 300; }
+.pricing-unit { font-size: 13px; color: var(--muted); margin-bottom: 28px; }
+.pricing-feature { font-size: 13px; color: var(--text); padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
+.pricing-feature:last-of-type { border-bottom: none; }
+.pricing-feature::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+.pricing-cta {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+  padding: 14px;
+  background: var(--gold);
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.pricing-cta:hover { background: var(--gold-light); transform: translateY(-2px); }
+.pricing-cta.ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.pricing-cta.ghost:hover { border-color: var(--gold); color: var(--gold); background: transparent; }
+
+/* ── TRUST BAR ── */
+.trust-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+.trust-item {
+  background: var(--card);
+  padding: 28px 24px;
+  text-align: center;
+}
+.trust-icon { font-size: 32px; margin-bottom: 10px; }
+.trust-title { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.trust-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+/* SCARCITY BAR */
+.scarcity-bar {
+  background: rgba(224,62,45,0.08);
+  border: 1px solid rgba(224,62,45,0.2);
+  border-radius: 10px;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  max-width: 600px;
+  margin: 0 auto 48px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
+}
+.scarcity-dot {
+  width: 10px; height: 10px;
+  background: var(--red);
+  border-radius: 50%;
+  animation: pulse-dot 1.5s ease infinite;
+  flex-shrink: 0;
+}
+.scarcity-bar strong { color: var(--red); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--deep);
+  border-top: 1px solid var(--border);
+  padding: 48px 40px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 0;
+}
+.footer-disclaimer {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.8;
+  align-self: stretch;
+  width: 100%;
+  box-sizing: border-box;
+}
+footer .logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 3px; color: var(--muted); }
+footer .logo span { color: var(--gold); opacity: 0.6; }
+footer a { color: var(--muted); text-decoration: none; margin: 0 12px; }
+footer a:hover { color: var(--white); }
+
+/* ── ANIMATIONS ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; padding: 60px 24px; }
+  .hero-visual { display: block; width: 100%; margin-top: 32px; }
+  .product-showcase { height: 280px; }
+  section { padding: 70px 24px; }
+  .col-2, .problem-cards, .faq-grid, .pricing-cards, .reviews-grid { grid-template-columns: 1fr; }
+  .benefits-grid, .hiw-steps { grid-template-columns: 1fr 1fr; }
+  .trust-bar { grid-template-columns: 1fr 1fr; }
+  nav { padding: 14px 24px; }
+  footer { flex-direction: column; gap: 20px; text-align: center; padding: 32px 24px 100px; }
+  .hiw-steps::before { display: none; }
+}
+
+/* ── STICKY BUY BAR ── */
+.sticky-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 999;
+  background: rgba(10,10,11,0.97);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border);
+  padding: 14px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 -8px 40px rgba(0,0,0,0.4);
+}
+.sticky-bar.visible { transform: translateY(0); }
+.sticky-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.sticky-bar-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: var(--white);
+}
+.sticky-bar-logo span { color: var(--gold); }
+.sticky-bar-divider {
+  width: 1px; height: 32px;
+  background: var(--border);
+}
+.sticky-bar-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+.sticky-bar-text strong { color: var(--white); }
+.sticky-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.sticky-bar-price {
+  text-align: right;
+}
+.sticky-bar-price .old { font-size: 12px; color: var(--muted); text-decoration: line-through; }
+.sticky-bar-price .now { font-size: 20px; font-weight: 800; color: var(--gold); font-family: 'Bebas Neue', sans-serif; letter-spacing: 1px; line-height: 1; }
+.sticky-bar-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold);
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 13px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(200,169,110,0.35);
+}
+.sticky-bar-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+.sticky-bar-guarantee {
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+@media (max-width: 900px) {
+  .sticky-bar { padding: 12px 16px; gap: 12px; }
+  .sticky-bar-left { display: none; }
+  .sticky-bar-right { width: 100%; justify-content: space-between; }
+  .sticky-bar-guarantee { display: none; }
+}
+
+/* ── VIDEO STEPS ── */
+.hiw-video-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+  position: relative;
+}
+.hiw-video-steps::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: calc(16.6% + 20px);
+  right: calc(16.6% + 20px);
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold), rgba(200,169,110,0.2), var(--gold));
+  z-index: 0;
+}
+.hiw-video-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+.hiw-step-num {
+  width: 56px; height: 56px;
+  background: var(--card);
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  color: var(--gold);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 24px rgba(200,169,110,0.2);
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+.hiw-video-wrapper {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--card);
+  position: relative;
+  cursor: pointer;
+}
+.hiw-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hiw-video-wrapper .play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.25);
+  transition: background 0.2s;
+}
+.hiw-video-wrapper:hover .play-overlay { background: rgba(0,0,0,0.1); }
+.hiw-video-wrapper.playing .play-overlay { opacity: 0; pointer-events: none; }
+.play-btn {
+  width: 52px; height: 52px;
+  background: rgba(200,169,110,0.9);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.2s;
+}
+.hiw-video-wrapper:hover .play-btn { transform: scale(1.1); }
+.play-btn svg { margin-left: 4px; }
+.hiw-video-label {
+  margin-top: 18px;
+  text-align: center;
+}
+.hiw-video-label h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.hiw-video-label p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+@media (max-width: 900px) {
+  .hiw-video-steps { grid-template-columns: 1fr; }
+  .hiw-video-steps::before { display: none; }
+  .hiw-video-wrapper { max-width: 360px; margin: 0 auto; width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- STICKY BUY BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-bar-left">
+    <div class="sticky-bar-logo">EM<span>SENSE</span></div>
+    <div class="sticky-bar-divider"></div>
+    <div class="sticky-bar-text"><strong>EMSense EMS Massager</strong> — Triple Therapy Relief</div>
+  </div>
+  <div class="sticky-bar-right">
+    <div class="sticky-bar-guarantee">🛡️ 30-Day Guarantee</div>
+    <div class="sticky-bar-price">
+      <div class="old">$99.99</div>
+      <div class="now">$49.99</div>
+    </div>
+    <a href="https://www.clickrtrckr.com/C36P6M/7BNN9ZD/?uid=11267" target="_blank" rel="nofollow" class="sticky-bar-cta">
+      Claim 50% Off
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span>⚡ EMSENSE EMS MASSAGER</span>
+    <span>🔥 DRUG-FREE RELIEF</span>
+    <span>✅ 30-DAY GUARANTEE</span>
+    <span>🚚 FREE SHIPPING</span>
+    <span>⭐ 50% OFF LIMITED OFFER</span>
+    <span>💪 PODIATRIST RECOMMENDED</span>
+    <span>⚡ EMSENSE EMS MASSAGER</span>
+    <span>🔥 DRUG-FREE RELIEF</span>
+    <span>✅ 30-DAY GUARANTEE</span>
+    <span>🚚 FREE SHIPPING</span>
+    <span>⭐ 50% OFF LIMITED OFFER</span>
+    <span>💪 PODIATRIST RECOMMENDED</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">EM<span>SENSE</span></div>
+  <a href="https://www.clickrtrckr.com/C36P6M/7BNN9ZD/?uid=11267" target="_blank" rel="nofollow" class="nav-cta">Get 50% Off →</a>
+</nav>
+
+<!-- ══════════════════════════════════════ -->
+<!--  HERO                                  -->
+<!-- ══════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">EMSense Triple-Therapy EMS Massager</div>
+    <h1 class="hero-title">
+      Your Body.<br>
+      <em>Restored.</em>
+      Every Day.
+    </h1>
+    <p class="hero-sub">
+      Stop masking discomfort. The <strong>EMSense EMS Massager</strong> uses clinically-inspired EMS therapy — combining targeted stimulation, soothing warmth, and gentle compression — to help your body heal itself, naturally.
+    </p>
+    <div class="hero-actions">
+      <a href="https://www.clickrtrckr.com/C36P6M/7BNN9ZD/?uid=11267" target="_blank" rel="nofollow" class="btn-primary">
+        Try It Risk-Free — 50% Off
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#how-it-works" class="btn-ghost">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z" fill="currentColor" stroke="none"/></svg>
+        See How It Works
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">84<span>%</span></div>
+        <div class="stat-label">Feel relief in week 1</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">103<span>K+</span></div>
+        <div class="stat-label">Happy customers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">30</div>
+        <div class="stat-label">Day money-back</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT VISUAL -->
+  <div class="hero-visual">
+    <div class="product-showcase">
+
+      <!-- Hero video -->
+      <video
+        src="top_photo.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);display:block;"
+      ></video>
+
+      <!-- Subtle dark gradient at bottom so badges stay readable -->
+      <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(10,10,11,0.55) 0%, transparent 50%);border-radius:var(--radius-lg);pointer-events:none;"></div>
+
+      <!-- Badge overlays -->
+      <div class="showcase-badges">
+        <div class="badge-float badge-1">
+          <span class="badge-icon">⚡</span>
+          <div>
+            <div class="badge-text">EMS Active</div>
+            <div class="badge-sub">3 intensity levels</div>
+          </div>
+        </div>
+        <div class="badge-float badge-2">
+          <span class="badge-icon">🔥</span>
+          <div>
+            <div class="badge-text">Heat + Compression</div>
+            <div class="badge-sub">Triple therapy mode</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!--  PROBLEM                               -->
+<!-- ══════════════════════════════════════ -->
+<section class="problem-section" id="problem">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="col-2">
+      <div>
+        <div class="section-label">The Problem</div>
+        <h2 class="section-title">Your body is<br><em>sending signals.</em><br>Are you listening?</h2>
+        <p class="section-body">Millions of people live with chronic discomfort they've simply accepted as "part of life." Poor circulation, persistent aches, numbing sensations — these aren't inevitable. They're warnings. And most conventional solutions never address the root cause.</p>
+      </div>
+      <div class="problem-cards fade-up">
+        <div class="problem-card">
+          <div class="problem-card-icon">🦴</div>
+          <h3>Chronic Aches & Stiffness</h3>
+          <p>Hours of sitting, standing, or repetitive motion leave muscles tight, joints stiff, and nerves crying out for relief that never quite comes.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-card-icon">🩸</div>
+          <h3>Poor Circulation</h3>
+          <p>When blood flow slows, oxygen-starved tissue leads to tingling, numbness, swelling, and that heavy, lifeless feeling that steals your energy.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-card-icon">💊</div>
+          <h3>Temporary "Solutions"</h3>
+          <p>Painkillers, creams, and ice packs offer short-term relief at best. None of them stimulate the body's own healing response or rebuild circulation.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-card-icon">😴</div>
+          <h3>Disrupted Sleep & Recovery</h3>
+          <p>Pain doesn't clock out at bedtime. Discomfort at night prevents the deep sleep your body needs to recover — creating a relentless cycle of fatigue.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!--  SOLUTION                              -->
+<!-- ══════════════════════════════════════ -->
+<section class="solution-section" id="solution">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="col-2">
+      <div class="solution-visual fade-up">
+        <div class="section-label" style="margin-bottom:28px;">The Technology</div>
+        <div class="therapy-stack">
+          <div class="therapy-item">
+            <div class="therapy-num">01</div>
+            <div class="therapy-text">
+              <h4>🔥 Therapeutic Heat</h4>
+              <p>Gentle, penetrating warmth dilates blood vessels and loosens tight tissue — the foundation of effective therapy.</p>
+            </div>
+          </div>
+          <div class="therapy-item">
+            <div class="therapy-num">02</div>
+            <div class="therapy-text">
+              <h4>⚡ EMS Pulse Stimulation</h4>
+              <p>Precisely calibrated electrical signals activate muscle fibers, stimulate nerve pathways, and boost local circulation deep within tissue.</p>
+            </div>
+          </div>
+          <div class="therapy-item">
+            <div class="therapy-num">03</div>
+            <div class="therapy-text">
+              <h4>🫶 Dynamic Compression</h4>
+              <p>Targeted pressure guides oxygen-rich blood through congested tissue, reducing swelling and accelerating the body's natural recovery.</p>
+            </div>
+          </div>
+          <div class="therapy-item">
+            <div class="therapy-num">04</div>
+            <div class="therapy-text">
+              <h4>🔄 Synergistic Action</h4>
+              <p>All three therapies work simultaneously — each enhancing the effectiveness of the others for results no single modality can match.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">The Solution</div>
+        <h2 class="section-title">One device.<br><em>Three therapies.</em><br>Real results.</h2>
+        <p class="section-body">EMSense EMS Massager brings professional-grade therapy to your living room. Used by people who've tried everything else — and finally found something that works. No prescriptions. No appointments. No side effects. Just 15–30 minutes a day, in the comfort of your home.</p>
+        <div style="margin-top:36px; display:flex; flex-direction:column; gap:14px;">
+          <div style="display:flex; align-items:center; gap:14px; font-size:15px; color:var(--text);">
+            <span style="color:var(--gold); font-weight:700; font-size:18px;">✓</span> Drug-free and completely non-invasive
+          </div>
+          <div style="display:flex; align-items:center; gap:14px; font-size:15px; color:var(--text);">
+            <span style="color:var(--gold); font-weight:700; font-size:18px;">✓</span> Designed for daily use at home
+          </div>
+          <div style="display:flex; align-items:center; gap:14px; font-size:15px; color:var(--text);">
+            <span style="color:var(--gold); font-weight:700; font-size:18px;">✓</span> Developed with guidance from body care specialists
+          </div>
+          <div style="display:flex; align-items:center; gap:14px; font-size:15px; color:var(--text);">
+            <span style="color:var(--gold); font-weight:700; font-size:18px;">✓</span> 84% of users notice a change within 7 days
+          </div>
+        </div>
+        <a href="https://www.clickrtrckr.com/C36P6M/7BNN9ZD/?uid=11267" target="_blank" rel="nofollow" class="btn-primary" style="margin-top:40px; display:inline-flex;">
+          Claim 50% Off Today →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!--  BENEFITS                              -->
+<!-- ══════════════════════════════════════ -->
+<section class="benefits-section">
+  <div style="max-width:1200px; margin:0 auto; text-align:center;">
+    <div class="section-label">Why It Works</div>
+    <h2 class="section-title">8 reasons people <em>never go back</em></h2>
+    <div class="benefits-grid fade-up" style="margin-top:60px;">
+
+      <div class="benefit-card">
+        <div class="benefit-icon">🩺</div>
+        <h3>Addresses Root Causes</h3>
+        <p>Rather than numbing pain, it actively works to improve circulation and nerve function — what most products never touch.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">⏱️</div>
+        <h3>Relief in 15 Minutes</h3>
+        <p>Most users feel a noticeable difference during their very first session. No waiting weeks to see if it's working.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">🛋️</div>
+        <h3>Effortless Daily Use</h3>
+        <p>Use it while watching TV, reading, or relaxing. It does the work so you don't have to change your routine.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">🚫</div>
+        <h3>Zero Side Effects</h3>
+        <p>No pills, no chemicals, no injections. Just clean, externally-applied therapy that's safe for daily use.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">🎛️</div>
+        <h3>Fully Customizable</h3>
+        <p>Multiple intensity levels and heat settings let you personalize each session to exactly how your body feels that day.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">💤</div>
+        <h3>Better Sleep Quality</h3>
+        <p>When pain doesn't wake you up, you sleep deeper. Users consistently report significant improvements in overnight rest.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">🔋</div>
+        <h3>Cordless Freedom</h3>
+        <p>A fully rechargeable battery means no outlet required. Use it in your chair, your bed, or anywhere that's comfortable.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">💰</div>
+        <h3>Save on Ongoing Costs</h3>
+        <p>Compare to repeated clinic visits, specialist appointments, and monthly medication costs. EMSense pays for itself fast.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!--  HOW IT WORKS                          -->
+<!-- ══════════════════════════════════════ -->
+<section id="how-it-works">
+  <div style="max-width:1100px; margin:0 auto; text-align:center;">
+    <div class="section-label">Simple As 1-2-3</div>
+    <h2 class="section-title">Up and running in<br><em>under 60 seconds</em></h2>
+    <p class="section-body" style="margin:0 auto 20px;">No complicated setup. No learning curve. Designed so that anyone — regardless of age or tech experience — can use it confidently from day one.</p>
+
+    <div class="hiw-video-steps fade-up">
+
+      <!-- Step 1 -->
+      <div class="hiw-video-card">
+        <div class="hiw-step-num">1</div>
+        <div class="hiw-video-wrapper" id="vid1wrap">
+          <video id="vid1" src="1.mp4" playsinline preload="metadata" muted loop></video>
+          <div class="play-overlay" id="play1">
+            <div class="play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--black)"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="hiw-video-label">
+          <h3>Wrap &amp; Secure</h3>
+          <p>Slide the soft wrap around your feet and fasten the adjustable straps for a snug, comfortable fit.</p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="hiw-video-card">
+        <div class="hiw-step-num">2</div>
+        <div class="hiw-video-wrapper" id="vid2wrap">
+          <video id="vid2" src="2.mp4" playsinline preload="metadata" muted loop></video>
+          <div class="play-overlay" id="play2">
+            <div class="play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--black)"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="hiw-video-label">
+          <h3>Select Your Settings</h3>
+          <p>Choose your heat level and massage intensity with the simple one-touch control panel.</p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="hiw-video-card">
+        <div class="hiw-step-num">3</div>
+        <div class="hiw-video-wrapper" id="vid3wrap">
+          <video id="vid3" src="3.mp4" playsinline preload="metadata" muted loop></video>
+          <div class="play-overlay" id="play3">
+            <div class="play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--black)"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="hiw-video-label">
+          <h3>Relax &amp; Recover</h3>
+          <p>Sit back for 15–30 minutes. Feel warmth, gentle pulses, and tension melting away.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- EMS Explainer -->
+    <div style="background:var(--card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:48px; margin-top:60px; text-align:left; max-width:800px; margin-left:auto; margin-right:auto;">
+      <div class="section-label" style="margin-bottom:16px;">The Science, Simply Explained</div>
+      <h3 style="font-family:'DM Serif Display',serif; font-size:26px; color:var(--white); margin-bottom:16px;">What is EMS, exactly?</h3>
+      <p style="color:var(--text); line-height:1.8; margin-bottom:16px;">EMS stands for Electrical Muscle Stimulation. It uses low-level electrical impulses — the same kind your own nervous system uses — to gently activate muscles and stimulate the surrounding tissue.</p>
+      <p style="color:var(--text); line-height:1.8; margin-bottom:16px;">This sends a signal to the body to increase blood flow to the area, which delivers fresh oxygen, removes waste products, and triggers the body's natural recovery response. It's the same technology used by physiotherapists in clinical settings — now available for home use.</p>
+      <p style="color:var(--muted); line-height:1.8; font-size:14px;">The EMSense EMS Massager combines EMS with therapeutic heat and compression, creating a layered approach that clinical research shows is significantly more effective than any single therapy alone.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!--  TESTIMONIALS                          -->
+<!-- ══════════════════════════════════════ -->
+<section class="testimonials-section">
+  <div style="max-width:1100px; margin:0 auto; text-align:center;">
+    <div class="section-label">Real Results</div>
+    <h2 class="section-title">People who were <em>exactly where you are</em></h2>
+    <p class="section-body" style="margin:0 auto;">Thousands of real customers. Real relief. Here's what they say.</p>
+
+    <div class="reviews-grid fade-up">
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"I've tried every cream, every sock, every gadget on the market. Nothing gave me consistent relief until this. After one week of nightly sessions, I was sleeping through the night again. I didn't think that was possible anymore."</p>
+        <div class="review-author">
+          <img src="woman1.jpg" alt="Margaret T." style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(200,169,110,0.4);flex-shrink:0;">
+          <div>
+            <div class="author-name">Margaret T.</div>
+            <div class="author-meta">Retired teacher, 67 · Verified Buyer</div>
+          </div>
+          <span class="verified-badge">✓ Verified</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"I work 10-hour shifts on a concrete floor. By the time I get home my feet and legs are completely shot. This changed my evenings entirely. I sit down, put it on for 20 minutes, and feel like a different person. My wife started using it too — we had to order a second one."</p>
+        <div class="review-author">
+          <img src="man1.webp" alt="Daniel R." style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(200,169,110,0.4);flex-shrink:0;">
+          <div>
+            <div class="author-name">Daniel R.</div>
+            <div class="author-meta">Warehouse supervisor, 44 · Verified Buyer</div>
+          </div>
+          <span class="verified-badge">✓ Verified</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"I bought this for my mother after her doctor mentioned her circulation was poor. She's been using it every evening for a month. She says her feet feel warmer and less numb than they have in years. Watching her walk more comfortably is worth every penny."</p>
+        <div class="review-author">
+          <img src="Woman2.jpg" alt="Sarah K." style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(200,169,110,0.4);flex-shrink:0;">
+          <div>
+            <div class="author-name">Sarah K.</div>
+            <div class="author-meta">Bought for parent, 52 · Verified Buyer</div>
+          </div>
+          <span class="verified-badge">✓ Verified</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"I was skeptical — I've wasted money on things that promised results before. But the 30-day guarantee made me take a chance. Within 5 days the constant burning sensation in my feet had reduced noticeably. By two weeks I was waking up without pain. Genuinely shocked."</p>
+        <div class="review-author">
+          <img src="man2.avif" alt="Robert H." style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(200,169,110,0.4);flex-shrink:0;">
+          <div>
+            <div class="author-name">Robert H.</div>
+            <div class="author-meta">Retired, 71 · Verified Buyer</div>
+          </div>
+          <span class="verified-badge">✓ Verified</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"As a nurse, I'm on my feet all day and my evenings used to be painful recovery sessions with ice packs and elevation. EMSense EMS Massager replaced all of that. Active recovery instead of just waiting out the pain. I recommend it to my patients now."</p>
+        <div class="review-author">
+          <img src="Woman3.jpg" alt="Lisa M." style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(200,169,110,0.4);flex-shrink:0;">
+          <div>
+            <div class="author-name">Lisa M.</div>
+            <div class="author-meta">RN, 38 · Verified Buyer</div>
+          </div>
+          <span class="verified-badge">✓ Verified</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"My podiatrist mentioned EMS therapy and I looked into devices. EMSense EMS Massager was exactly what I needed at a fraction of the clinical cost. Three sessions a week has made a measurable difference. The heat and compression together feel incredible after a long day."</p>
+        <div class="review-author">
+          <img src="man3.jpg" alt="James W." style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(200,169,110,0.4);flex-shrink:0;">
+          <div>
+            <div class="author-name">James W.</div>
+            <div class="author-meta">Construction foreman, 55 · Verified Buyer</div>
+          </div>
+          <span class="verified-badge">✓ Verified</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!--  DOCTOR / AUTHORITY                    -->
+<!-- ══════════════════════════════════════ -->
+<section style="padding:100px 80px; background:var(--black); border-top:1px solid var(--border);">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="col-2" style="gap:70px; align-items:center;">
+
+      <!-- LEFT: label + title + video -->
+      <div>
+        <div class="section-label" style="margin-bottom:12px;">Medical Perspective</div>
+        <h2 class="section-title" style="margin-bottom:24px;">What specialists<br>say about <em>EMS therapy</em></h2>
+        <div style="position:relative; border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border); background:var(--card); aspect-ratio:16/9; cursor:pointer;" id="docWrap">
+          <video id="docVid" src="doctor.mp4" playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+          <div id="docOverlay" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);transition:background 0.2s;">
+            <div style="width:68px;height:68px;background:rgba(200,169,110,0.92);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(200,169,110,0.4);transition:transform 0.2s;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="#0a0a0b" style="margin-left:4px;"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div style="position:absolute;top:16px;left:16px;background:rgba(10,10,11,0.85);backdrop-filter:blur(8px);border:1px solid rgba(200,169,110,0.3);border-radius:8px;padding:8px 14px;font-size:12px;font-weight:700;color:var(--gold);letter-spacing:1px;text-transform:uppercase;">
+            ⚕️ Specialist Recommendation
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: description + bullets + CTA -->
+      <div>
+        <p class="section-body" style="margin-bottom:28px;">EMS-based foot therapy has been used in clinical settings for years. Watch this short video to understand why body care specialists are increasingly recommending at-home EMS devices as a safe, effective first step for people dealing with circulation problems and nerve discomfort.</p>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:36px;">
+          <div style="display:flex;align-items:flex-start;gap:14px;font-size:15px;color:var(--text);">
+            <span style="color:var(--gold);font-weight:700;font-size:18px;flex-shrink:0;">✓</span>
+            <span>Clinically-used EMS technology now available at home</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;font-size:15px;color:var(--text);">
+            <span style="color:var(--gold);font-weight:700;font-size:18px;flex-shrink:0;">✓</span>
+            <span>Non-invasive, drug-free — safe for daily use</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;font-size:15px;color:var(--text);">
+            <span style="color:var(--gold);font-weight:700;font-size:18px;flex-shrink:0;">✓</span>
+            <span>Recommended as an alternative to ongoing medication</span>
+          </div>
+        </div>
+        <a href="https://www.clickrtrckr.com/C36P6M/7BNN9ZD/?uid=11267" target="_blank" rel="nofollow" class="btn-primary" style="display:inline-flex;">
+          Try It Risk-Free →
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!--  FEATURES                              -->
+<!-- ══════════════════════════════════════ -->
+<section id="features">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="section-label" style="text-align:center;">Built Different</div>
+    <h2 class="section-title" style="text-align:center;">Every detail <em>designed<br>with purpose</em></h2>
+
+    <div class="col-2" style="margin-top:60px; gap:60px;">
+      <div class="features-list fade-up">
+        <div class="feature-row">
+          <div class="feature-icon">🪶</div>
+          <div class="feature-content">
+            <h3>Featherlight Wearable Design</h3>
+            <p>Engineered with soft, breathable fabric and a flexible form factor that conforms to your body. Comfortable enough to forget you're wearing it.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon">🎛️</div>
+          <div class="feature-content">
+            <h3>3 Intensity Levels + 3 Heat Settings</h3>
+            <p>From gentle daily maintenance to more intensive recovery sessions — dial in exactly what your body needs with one-touch simplicity.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon">🔋</div>
+          <div class="feature-content">
+            <h3>Long-Lasting Rechargeable Battery</h3>
+            <p>Multiple full sessions on a single charge. USB-C rechargeable in under 2 hours. No outlet required during use — total freedom of movement.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon">📐</div>
+          <div class="feature-content">
+            <h3>Universal Fit with Adjustable Straps</h3>
+            <p>Designed to fit a wide range of body sizes comfortably. Secure but never constrictive — stays in place throughout your entire session.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon">🏗️</div>
+          <div class="feature-content">
+            <h3>Premium-Grade Materials</h3>
+            <p>Built for daily use with durable components that maintain consistent performance. Not a product you'll replace in three months.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-visual fade-up">
+        <div class="section-label" style="margin-bottom:24px;">Specifications</div>
+        <div class="spec-row">
+          <span class="spec-label">Therapy Modes</span>
+          <span class="spec-pill">Triple Therapy</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Heat Levels</span>
+          <span class="spec-value">Low / Medium / High</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Intensity Settings</span>
+          <span class="spec-value">3 adjustable levels</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Session Length</span>
+          <span class="spec-value">15 – 30 minutes</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Battery Life</span>
+          <span class="spec-value">Multiple sessions / charge</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Charging</span>
+          <span class="spec-value">USB-C, ~2 hours</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Fit Type</span>
+          <span class="spec-value">Adjustable, universal</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Material</span>
+          <span class="spec-value">Soft breathable fabric</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Drug-Free</span>
+          <span class="spec-pill">100% Clean</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Guarantee</span>
+          <span class="spec-pill">30-Day Refund</span>
+        </div>
+        <div style="margin-top:28px; text-align:center;">
+          <a href="https://www.clickrtrckr.com/C36P6M/7BNN9ZD/?uid=11267" target="_blank" rel="nofollow" class="btn-primary" style="width:100%; justify-content:center;">
+            Order Now — 50% Off →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!--  FAQ                                   -->
+<!-- ══════════════════════════════════════ -->
+<section class="faq-section">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:60px;">
+      <div class="section-label">Got Questions?</div>
+      <h2 class="section-title">Answered <em>honestly</em></h2>
+    </div>
+
+    <div class="faq-grid">
+
+      <div class="faq-item fade-up">
+        <div class="faq-q">How quickly can I expect to feel results?</div>
+        <div class="faq-a">Most users notice a difference during or immediately after their first session — a reduction in tightness, improved warmth, or a pleasant release of tension. More significant improvements in circulation and comfort typically develop over 1–2 weeks of consistent daily use.</div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-q">Is this safe if I have a pre-existing health condition?</div>
+        <div class="faq-a">EMSense EMS Massager is designed as a non-invasive wellness device for general comfort and recovery. However, if you have a diagnosed medical condition — particularly circulatory, neurological, or heart-related — please consult your healthcare provider before use. This is not a medical device and is not intended to diagnose or treat any condition.</div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-q">How often should I use it?</div>
+        <div class="faq-a">Daily use of 15–30 minutes per session delivers the best results. Many users incorporate it into their evening routine — winding down after work or before bed. It's comfortable enough for daily use without any risk of overuse.</div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-q">What areas of the body can I use it on?</div>
+        <div class="faq-a">EMSense EMS Massager is primarily designed as a foot and lower leg wrap, but the adjustable, flexible design means it can be adapted for other areas. Refer to the included instruction guide for recommended use areas and positions.</div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-q">What happens if it doesn't work for me?</div>
+        <div class="faq-a">We stand behind this product with a full 30-day money-back guarantee. If for any reason EMSense EMS Massager doesn't deliver the results you were hoping for, simply contact our support team within 30 days of receiving your order for a complete refund — no questions asked.</div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-q">Is it suitable for older users or seniors?</div>
+        <div class="faq-a">Absolutely. EMSense EMS Massager is designed with simplicity in mind — a single control panel with clear intensity steps. Many of our most satisfied users are over 60 and find it exceptionally easy to operate. Adjustable straps accommodate all foot and body sizes comfortably.</div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-q">Can I use it while doing other things?</div>
+        <div class="faq-a">Yes — that's one of its greatest advantages. Most users use the EMSense EMS Massager while watching television, reading, or relaxing. The cordless design means no tether to an outlet, and once it's on and set, it requires no attention until your session is done.</div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-q">How do I know I'm getting a genuine product?</div>
+        <div class="faq-a">Purchase only through our official store (this page) to ensure you receive the authentic EMSense EMS Massager with full warranty protection, quality assurance, and access to our 30-day money-back guarantee. Third-party listings may not include these protections.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!--  FINAL CTA                             -->
+<!-- ══════════════════════════════════════ -->
+<section class="cta-section" id="order">
+  <div style="max-width:1100px; margin:0 auto; position:relative;">
+    <div class="section-label" style="text-align:center;">Limited Time Offer</div>
+    <h2 class="section-title" style="text-align:center;">Your body has been<br>waiting long enough.<br><em>Start tonight.</em></h2>
+    <p class="section-body" style="text-align:center; margin:0 auto 40px;">Join over 103,000 people who decided to stop accepting pain as permanent. Try EMSense EMS Massager for 30 days. If your life doesn't improve, you pay nothing.</p>
+
+    <div class="scarcity-bar">
+      <div class="scarcity-dot"></div>
+      <span>⚠️ Only <strong>47 units remaining</strong> at the 50% discount price — offer expires in <strong id="countdown" style="color:var(--red); font-variant-numeric: tabular-nums;">--:--:--</strong></span>
+    </div>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar fade-up">
+      <div class="trust-item">
+        <div class="trust-icon">🛡️</div>
+        <div class="trust-title">30-Day Guarantee</div>
+        <div class="trust-desc">Full refund if you're not completely satisfied. No questions asked.</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🔒</div>
+        <div class="trust-title">Secure Checkout</div>
+        <div class="trust-desc">256-bit SSL encryption. Your data is always protected.</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🚚</div>
+        <div class="trust-title">Free Shipping</div>
+        <div class="trust-desc">Fast tracked delivery on all orders. No minimum required.</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">💬</div>
+        <div class="trust-title">Live Support</div>
+        <div class="trust-desc">Real humans available to help. Response within 24 hours.</div>
+      </div>
+    </div>
+
+    <!-- Pricing -->
+    <div class="pricing-cards">
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Starter</div>
+        <div class="pricing-price">
+          <span>$99.99</span>
+          $49.99
+        </div>
+        <div class="pricing-unit">1x EMSense EMS Massager · Save 50%</div>
+        <div class="pricing-feature">Full Triple Therapy</div>
+        <div class="pricing-feature">Free US Shipping</div>
+        <div class="pricing-feature">30-Day Guarantee</div>
+        <div class="pricing-feature">Full Setup Guide</div>
+        <a href="https://www.clickrtrckr.com/C36P6M/7BNN9ZD/?uid=11267" target="_blank" rel="nofollow" class="pricing-cta ghost">Order 1 Unit</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="popular-label">Most Popular</div>
+        <div class="pricing-tier">Family Pack</div>
+        <div class="pricing-price">
+          <span>$179.99</span>
+          $78.99
+        </div>
+        <div class="pricing-unit">2x EMSense EMS Massagers · $39.49 each</div>
+        <div class="pricing-feature">Everything in Starter ×2</div>
+        <div class="pricing-feature">Free Priority Shipping</div>
+        <div class="pricing-feature">30-Day Guarantee</div>
+        <div class="pricing-feature">Gift packaging available via official store</div>
+        <a href="https://www.clickrtrckr.com/C36P6M/7BNN9ZD/?uid=11267" target="_blank" rel="nofollow" class="pricing-cta">Order 2 Units →</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Best Value</div>
+        <div class="pricing-price">
+          <span>$370.99</span>
+          $149.99
+        </div>
+        <div class="pricing-unit">4x EMSense EMS Massagers · $37.49 each</div>
+        <div class="pricing-feature">Everything in Starter ×4</div>
+        <div class="pricing-feature">Free Express Shipping</div>
+        <div class="pricing-feature">30-Day Guarantee</div>
+        <div class="pricing-feature">Lowest per-unit price</div>
+        <a href="https://www.clickrtrckr.com/C36P6M/7BNN9ZD/?uid=11267" target="_blank" rel="nofollow" class="pricing-cta ghost">Order 4 Units</a>
+      </div>
+
+    </div>
+
+    <div style="text-align:center; color:var(--muted); font-size:13px; margin-top:16px;">
+      🔒 Safe &amp; Secure Checkout &nbsp;·&nbsp; 💳 Visa · Mastercard · Amex · PayPal &nbsp;·&nbsp; 🛡️ 30-Day Risk-Free Trial
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!--  FOOTER                                -->
+<!-- ══════════════════════════════════════ -->
+<footer>
+  <div class="logo">EM<span>SENSE</span></div>
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">Refund Policy</a>
+    <a href="#">Contact</a>
+  </div>
+  <div class="footer-disclaimer">
+    This is an independent affiliate page and is not the official EMSense website. EMSense is a registered trademark of its respective owner. This page is not affiliated with, endorsed by, or sponsored by EMSense. This product is not intended to diagnose, treat, cure, or prevent any disease. Results vary. Always consult a healthcare provider for medical concerns.
+  </div>
+</footer>
+
+
+<!-- ── JAVASCRIPT ── -->
+<script>
+// ── 0. HERO VIDEO — mobile autoplay fallback ──
+(function() {
+  const heroVid = document.querySelector('.product-showcase video');
+  if (!heroVid) return;
+  heroVid.muted = true;
+  const tryPlay = () => heroVid.play().catch(() => {});
+  tryPlay();
+  document.addEventListener('touchstart', tryPlay, { once: true });
+  document.addEventListener('scroll', tryPlay, { once: true });
+})();
+
+// ── 1. STICKY BAR — show after hero scrolls out of view ──
+(function() {
+  const bar = document.getElementById('stickyBar');
+  const hero = document.querySelector('.hero');
+  if (!bar || !hero) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) {
+        bar.classList.add('visible');
+      } else {
+        bar.classList.remove('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  io.observe(hero);
+})();
+
+// ── 2. COUNTDOWN TIMER — counts to midnight tonight ──
+(function() {
+  const el = document.getElementById('countdown');
+  if (!el) return;
+
+  // Store deadline in sessionStorage so it doesn't reset on scroll
+  let deadline = sessionStorage.getItem('offerDeadline');
+  if (!deadline) {
+    // Set deadline to midnight tonight (local time)
+    const now = new Date();
+    const midnight = new Date(now);
+    midnight.setHours(23, 59, 59, 0);
+    deadline = midnight.getTime();
+    sessionStorage.setItem('offerDeadline', deadline);
+  } else {
+    deadline = parseInt(deadline);
+  }
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function tick() {
+    const now = Date.now();
+    const diff = Math.max(0, deadline - now);
+
+    if (diff === 0) {
+      el.textContent = '00:00:00';
+      el.style.color = 'var(--muted)';
+      return;
+    }
+
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    el.textContent = `${pad(h)}:${pad(m)}:${pad(s)}`;
+    setTimeout(tick, 1000);
+  }
+  tick();
+})();
+
+// ── 3. VIDEO PLAY/PAUSE on click ──
+// Doctor video
+(function() {
+  const wrap = document.getElementById('docWrap');
+  const vid  = document.getElementById('docVid');
+  const overlay = document.getElementById('docOverlay');
+  if (!wrap || !vid) return;
+  wrap.addEventListener('click', () => {
+    if (vid.paused) { vid.play(); overlay.style.opacity = '0'; overlay.style.pointerEvents = 'none'; }
+    else            { vid.pause(); overlay.style.opacity = '1'; overlay.style.pointerEvents = 'auto'; }
+  });
+})();
+
+// How-it-works step videos
+[1, 2, 3].forEach(n => {
+  const wrap = document.getElementById(`vid${n}wrap`);
+  const vid  = document.getElementById(`vid${n}`);
+  const overlay = document.getElementById(`play${n}`);
+  if (!wrap || !vid) return;
+
+  wrap.addEventListener('click', () => {
+    if (vid.paused) {
+      // Pause all others first
+      [1,2,3].forEach(x => {
+        const v = document.getElementById(`vid${x}`);
+        const w = document.getElementById(`vid${x}wrap`);
+        if (v && x !== n) { v.pause(); w.classList.remove('playing'); }
+      });
+      vid.play();
+      wrap.classList.add('playing');
+    } else {
+      vid.pause();
+      wrap.classList.remove('playing');
+    }
+  });
+});
+
+// ── 4. SCROLL ANIMATIONS (fade-up) ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Staggered children
+document.querySelectorAll('.benefits-grid, .reviews-grid, .problem-cards, .hiw-video-steps').forEach(parent => {
+  Array.from(parent.children).forEach((child, i) => {
+    child.style.transitionDelay = `${i * 0.1}s`;
+    child.classList.add('fade-up');
+    observer.observe(child);
+  });
+});
+</script>
+</body>
+</html>
