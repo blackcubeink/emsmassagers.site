@@ -792,30 +792,33 @@ section { padding: 100px 80px; }
 footer {
   background: var(--deep);
   border-top: 1px solid var(--border);
-  padding: 40px 80px;
+  padding: 48px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
   font-size: 13px;
   color: var(--muted);
+  text-align: center;
 }
-.footer-top {
-  width: 100%;
+.footer-links {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 0;
 }
 .footer-disclaimer {
-  width: 100%;
   border-top: 1px solid var(--border);
   padding-top: 20px;
   text-align: center;
   font-size: 12px;
   color: var(--muted);
-  line-height: 1.7;
-  max-width: 820px;
-  margin: 0 auto;
+  line-height: 1.8;
+  width: 100%;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 footer .logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 3px; color: var(--muted); }
 footer .logo span { color: var(--gold); opacity: 0.6; }
@@ -1784,14 +1787,12 @@ footer a:hover { color: var(--white); }
 <!--  FOOTER                                -->
 <!-- ══════════════════════════════════════ -->
 <footer>
-  <div class="footer-top">
-    <div class="logo">EM<span>SENSE</span></div>
-    <div>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-      <a href="#">Refund Policy</a>
-      <a href="#">Contact</a>
-    </div>
+  <div class="logo">EM<span>SENSE</span></div>
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">Refund Policy</a>
+    <a href="#">Contact</a>
   </div>
   <div class="footer-disclaimer">
     This is an independent affiliate page and is not the official EMSense website. EMSense is a registered trademark of its respective owner. This page is not affiliated with, endorsed by, or sponsored by EMSense. This product is not intended to diagnose, treat, cure, or prevent any disease. Results vary. Always consult a healthcare provider for medical concerns.
